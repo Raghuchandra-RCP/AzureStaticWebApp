@@ -115,7 +115,7 @@ section.home{
             }
         }
         & .des{
-            color: #eee5;
+            color: rgba(234, 213, 213, 0.926);
             margin: 30px 0;
             border-left: .7em solid #e945e3;
             padding-left: 2em;
@@ -134,7 +134,7 @@ section.home{
         }
     }
     & .avatar{
-        text-align: right;
+        text-align: center;
         & .card{
             display: inline-flex;
             flex-direction: column;
@@ -149,21 +149,9 @@ section.home{
                 height: min(50vh, 700px);
                 object-fit: cover;
                 object-position: top;
-                clip-path: polygon(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
+                clip-path: round(81% 0, 100% 18%, 100% 100%, 0 100%, 0 0);
             }
-            & .info{
-                background-color: #eee; 
-                color: #010824;
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                text-align: center;
-                gap: 20px;
-                padding: 20px;
-                font-size: 1.2em;
-                & div:nth-child(1), div:nth-child(2), div:nth-child(3){
-                    font-weight: bold;
-                }
-            }
+
         }
     }
 }
@@ -174,7 +162,8 @@ section.skills{
         font-family: 'MuseoModerno', system-ui;
     }
     & .des{
-        color: #eee5;
+        color: #f9abab;
+        
         text-align: center;
         max-width: 500px;
         margin: auto;
@@ -217,6 +206,7 @@ section.skills{
                 width: 100%;
                 font-size: small;
             }
+
         }
     }
 }
@@ -228,7 +218,7 @@ section.projects{
         font-family: 'MuseoModerno', system-ui;
     }
     & .des{
-        color: #eee5;
+        color: rgba(221, 243, 25, 0.826);
         text-align: center;
         max-width: 500px;
         margin: auto;
@@ -252,7 +242,7 @@ section.projects{
                 overflow: hidden;
                 
                 & img{
-                    height: 400px;
+                    height: 350px;
                     border-radius: 10px;
                     box-shadow: 0 20px 40px #010824;
                 }
@@ -295,27 +285,104 @@ section.projects{
     }
 }
 
-section.contacts{
+section.contacts {
     padding-bottom: 220px;
-    & .title{
-        text-align: center;
-        font-size: 5vw;
+    background: linear-gradient(to right, #161e2d, #28334b);
+  
+    .title {
+      text-align: center;
+      font-size: 5vw;
+      font-family: 'MuseoModerno', system-ui;
+      color: #fff;
+      padding: 10px 0;
+    }
+  
+    .description {
+      color: #eee5;
+      text-align: center;
+      max-width: 500px;
+      margin: auto;
+    }
+  
+    .form-group {
+      width: 80%;
+      margin: 3px auto;
+      display: flex;
+      flex-direction: column;
+  
+      label {
+        color: #fff;
+        font-size: 2.2vw;
         font-family: 'MuseoModerno', system-ui;
+        margin-bottom: 3px;
+      }
+  
+      input,
+      textarea {
+        padding: 5px;
+        border: none;
+        border-radius: 20px;
+        background: #161e2d;
+        color: #fff;
+        margin-bottom: 20px;
+        font-size: 1.6vw;
+      }
+  
+      textarea {
+        resize: none;
+      }
+  
+      button {
+        padding: 15px;
+        background: #f9b41a;
+        color: #161e2d;
+        border: none;
+        border-radius: 20px;
+        cursor: pointer;
+        font-size: 1.8vw;
+        transition: background 0.3s ease;
+        margin-top: 20px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+  
+      button:hover {
+        background: #f48c06;
+      }
     }
-    & .des{
-        color: #eee5;
-        text-align: center;
-        max-width: 500px;
-        margin: auto;
+  
+    .contact-info {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
     }
-    & .list{
-        text-align: center;
-        & .item{
-            margin-top: 50px;
+  
+    .contact-info ul {
+      list-style-type: none;
+      padding: 0;
+    }
+  
+    .contact-info ul li {
+      margin: 5px 0;
+    }
+  
+    .list {
+      text-align: center;
+  
+      .item {
+        margin-top: 50px;
+        font-size: 2vw;
+        font-family: 'MuseoModerno', system-ui;
+        color: #fff;
+  
+        a {
+          color: #f9b41a;
         }
+      }
     }
-}
-
+  }
+  
 /* animation */
 .animation{
     transform: translateY(50px);
