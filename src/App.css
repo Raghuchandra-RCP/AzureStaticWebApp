@@ -10,10 +10,10 @@ body{
     font-size: 15px;
     min-height: 100vh;
     background-image: linear-gradient(
-        to right, transparent 0 49px, #eee1 49px
+        to right, transparent 0 49px, rgba(238, 238, 238, 0.067) 49px
     ),
     linear-gradient(
-        to bottom, transparent 0 49px, #eee1 49px
+        to bottom, transparent 0 49px, rgba(237, 16, 145, 0.067) 49px
     );
     background-size: 50px 50px;
     &::before{
@@ -286,6 +286,7 @@ section.projects{
 }
 
 section.contacts {
+    scroll-behavior: smooth;
     padding-bottom: 220px;
     background: linear-gradient(to right, #161e2d, #28334b);
   

@@ -16,11 +16,15 @@ function Contacts() {
       value: 'https://www.linkedin.com/in/raghu-chandra-248769247/'
     }
   ]);
+  
   const divs = useRef([]);
   const scrollTab = useRef();
+  
+  // Clear and re-populate divs.current on each render
+  divs.current = [];
   CustomHook(scrollTab, divs);
 
-  // Function to check if the value is a URL or an email
+  // Function to check if the value is a URL
   const isURL = (value) => {
     try {
       new URL(value);
